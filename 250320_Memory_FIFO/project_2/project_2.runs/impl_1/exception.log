@@ -1,0 +1,4 @@
+ERROR: Exception caught trying to open file D:\250319_Memory\project_2\project_2.runs\impl_1/runme.log
+	Exception name: Error
+	Exception error code: 70
+	Exception message: 사용 권한이 없습니다.

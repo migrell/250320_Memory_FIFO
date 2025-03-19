@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Mar 19 12:22:31 2025
+# Process ID: 8032
+# Current directory: D:/250319_Memory/project_2/project_2.runs/synth_1
+# Command line: vivado.exe -log ram_ip.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ram_ip.tcl
+# Log file: D:/250319_Memory/project_2/project_2.runs/synth_1/ram_ip.vds
+# Journal file: D:/250319_Memory/project_2/project_2.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source ram_ip.tcl -notrace
