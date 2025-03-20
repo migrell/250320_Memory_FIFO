@@ -82,6 +82,8 @@ module tb_FIFO();
         
         wr = 0;
         rd = 0;
+        write_count = 0;
+        read_count = 0;
         
         // 랜덤 쓰기/읽기 테스트
         for (i=0; i<50; i=i+1) begin
