@@ -80,13 +80,24 @@ module tb_FIFO();
         
         // 랜덤 쓰기 테스트
         for (i=0; i<50; i=i+1) begin
-            @(negedge clk);
-            rand_wr = $random%2;
-            if(~full & rand_wr) //rand = 1일때만 if문으로 들어가 random value 생성
-                wdata = $random%256;
-                compare_data[] = wdata; //1byte -> 모든 값이 들어갈 수 있는 경우 생성
+            @(negedge clk); //쓰기 wdata를 negedge에서 시작하기 위함.
+            rand_wr = $random%2; //wr랜덤으로 1,0만들기
+            if(~full & rand_wr) //full 아니면서 wr 1일때만 새로운 wdata 생성
+              wdata = $random%256; //wdata random  값 생성
+              compare_data[write_count%16] = wdata; // 2**4 //1byte -> 모든 값이 들어갈 수 있는 경우 생성
+              //read data와 비교하기 위함 
+              write_count = write_count + 1;
         end
-        compare_data[] = wdata;
-    end
-endmodule
+        
+        rand_rd = $random%2;    //rd random으로 생성 0,1
+        if(~empty&rand_rd) begin //read test.
+            if(rdata == compare_data[read_count%16])begin //read한 횟수랑 같이 비교 
+                $display("pass");
+            end else begin
+                $display("fail: rdata = %h, compare_data =%h", rdata, compare_data[read_count%16]); //fail시 무슨값 출력하는지 
+            end
+        end
+        read_count = read_count + 1;
+         end
+    endmodule
 
