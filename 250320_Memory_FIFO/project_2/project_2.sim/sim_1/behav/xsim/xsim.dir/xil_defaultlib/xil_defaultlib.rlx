@@ -2,6 +2,6 @@
 2020.2
 Nov 18 2020
 09:47:47
-C:/Users/parkj/Desktop/250319_Memory_FIFO_4/250319_Memory_FIFO_Final/project_2/project_2.sim/sim_1/behav/xsim/glbl.v,1742371401,verilog,,,,glbl,,,,,,,,
-C:/Users/parkj/Desktop/250319_Memory_FIFO_4/250319_Memory_FIFO_Final/project_2/project_2.srcs/sim_1/new/sim_fifo_tb.v,1742380697,verilog,,,,tb_FIFO,,,,,,,,
-C:/Users/parkj/Desktop/250319_Memory_FIFO_4/250319_Memory_FIFO_Final/project_2/project_2.srcs/sources_1/new/fifo.v,1742382532,verilog,,C:/Users/parkj/Desktop/250319_Memory_FIFO_4/250319_Memory_FIFO_Final/project_2/project_2.srcs/sim_1/new/sim_fifo_tb.v,,FIFO;FIFO_control_unit;register_file,,,,,,,,
+C:/Users/kccistc/Desktop/250320_Memory_FIFO/250320_Memory_FIFO/project_2/project_2.sim/sim_1/behav/xsim/glbl.v,1742386444,verilog,,,,glbl,,,,,,,,
+C:/Users/kccistc/Desktop/250320_Memory_FIFO/250320_Memory_FIFO/project_2/project_2.srcs/sim_1/new/sim_fifo_tb.v,1742431612,verilog,,,,tb_FIFO,,,,,,,,
+C:/Users/kccistc/Desktop/250320_Memory_FIFO/250320_Memory_FIFO/project_2/project_2.srcs/sources_1/new/fifo.v,1742431569,verilog,,C:/Users/kccistc/Desktop/250320_Memory_FIFO/250320_Memory_FIFO/project_2/project_2.srcs/sim_1/new/sim_fifo_tb.v,,FIFO;FIFO_control_unit;register_file,,,,,,,,
