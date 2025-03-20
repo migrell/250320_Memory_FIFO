@@ -104,6 +104,7 @@ module tb_FIFO();
             rand_rd = $random%2; // rd random으로 생성 0,1
             if(~empty & rand_rd) begin // empty가 아니고 rand_rd가 1일 때
                 rd = 1;
+                #2; //타이밍 문제 해결 
                 if(rdata == compare_data[read_count%16]) begin // read한 횟수에 맞춰 비교
                     $display("pass");
                 end else begin
