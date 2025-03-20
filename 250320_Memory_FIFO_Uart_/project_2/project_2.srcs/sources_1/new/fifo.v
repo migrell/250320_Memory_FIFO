@@ -38,30 +38,6 @@ module FIFO (
 endmodule
 
 
-// module register_file (
-//     input clk,
-//     //write
-//     input [3:0] waddr,
-//     input [7:0] wdata,
-//     input wr,
-//     //read
-//     input [3:0] raddr,
-//     output  [7:0] rdata, // Changed to wire
-//     input rd
-// );
-//     reg [7:0] mem [0:15];
-
-//     //write
-//     always @(posedge clk) begin
-//         if (wr) begin
-//             mem [waddr] <= wdata;
-//         end
-//     end
-
-//     //read (using assign for combinational read)
-//     assign rdata = (rd) ? mem[raddr] : 8'b0; // Output 0 when not reading.
-
-// endmodule
 
 `timescale 1ns / 1ps
 
@@ -171,7 +147,7 @@ module FIFO_control_unit (
     
 endmodule
 
-
+//교수님 코드
 // module FIFO_control_unit (
 //     input clk, reset,
 //     //wr
