@@ -85,7 +85,7 @@ module tb_FIFO();
             if(~full & rand_wr) //full 아니면서 wr 1일때만 새로운 wdata 생성
               wdata = $random%256; //wdata random  값 생성
               compare_data[write_count%16] = wdata; // 2**4 //1byte -> 모든 값이 들어갈 수 있는 경우 생성
-              //read data와 비교하기 위함 
+              //read data와 비교하기 위함               //rdata와 compare_data를 비교하여 출력
               write_count = write_count + 1;
         end
         
