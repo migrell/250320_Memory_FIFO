@@ -1,25 +1,4 @@
 Vivado Simulator 2020.2
 Time resolution is 1 ps
-PASS: rdata=63, expected=63, read_count=          0
-PASS: rdata=65, expected=65, read_count=          1
-PASS: rdata=0d, expected=0d, read_count=          2
-PASS: rdata=ed, expected=ed, read_count=          3
-PASS: rdata=c6, expected=c6, read_count=          4
-PASS: rdata=12, expected=12, read_count=          5
-PASS: rdata=65, expected=65, read_count=          6
-PASS: rdata=96, expected=96, read_count=          7
-PASS: rdata=53, expected=53, read_count=          8
-PASS: rdata=02, expected=02, read_count=          9
-PASS: rdata=cf, expected=cf, read_count=         10
-PASS: rdata=eb, expected=eb, read_count=         11
-PASS: rdata=71, expected=71, read_count=         12
-PASS: rdata=3b, expected=3b, read_count=         13
-PASS: rdata=d9, expected=d9, read_count=         14
-PASS: rdata=f8, expected=f8, read_count=         15
-PASS: rdata=5c, expected=5c, read_count=          0
-PASS: rdata=49, expected=49, read_count=          1
-PASS: rdata=51, expected=51, read_count=          2
-PASS: rdata=12, expected=12, read_count=          3
-PASS: rdata=39, expected=39, read_count=          4
-PASS: rdata=85, expected=85, read_count=          5
-$stop called at time : 550 ns : File "C:/Users/kccistc/Desktop/250320_Memory_FIFO/250320_Memory_FIFO/project_2/project_2.srcs/sim_1/new/sim_fifo_tb.v" Line 72
+pass
+$stop called at time : 635 ns : File "C:/Users/kccistc/Desktop/250320_Memory_FIFO/250320_Memory_FIFO/project_2/project_2.srcs/sim_1/new/tb_memory.v" Line 57
