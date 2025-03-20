@@ -42,6 +42,8 @@ module tb_FIFO();
         wdata = 0;
         wr = 0;
         rd = 0;
+        write_count = 0;
+        read_count = 0;
         
         // 리셋 해제
         #10 
@@ -78,26 +80,37 @@ module tb_FIFO();
             #10;
         end
         
-        // 랜덤 쓰기 테스트
-        for (i=0; i<50; i=i+1) begin
-            @(negedge clk); //쓰기 wdata를 negedge에서 시작하기 위함.
-            rand_wr = $random%2; //wr랜덤으로 1,0만들기
-            if(~full & rand_wr) //full 아니면서 wr 1일때만 새로운 wdata 생성
-              wdata = $random%256; //wdata random  값 생성
-              compare_data[write_count%16] = wdata; // 2**4 //1byte -> 모든 값이 들어갈 수 있는 경우 생성
-              //read data와 비교하기 위함               //rdata와 compare_data를 비교하여 출력
-              write_count = write_count + 1;
-        end
+        wr = 0;
+        rd = 0;
         
-        rand_rd = $random%2;    //rd random으로 생성 0,1
-        if(~empty&rand_rd) begin //read test.
-            if(rdata == compare_data[read_count%16])begin //read한 횟수랑 같이 비교 
-                $display("pass");
+        // 랜덤 쓰기/읽기 테스트
+        for (i=0; i<50; i=i+1) begin
+            @(negedge clk); // 쓰기 wdata를 negedge에서 시작하기 위함
+            
+            // 쓰기 로직
+            rand_wr = $random%2; // wr 랜덤으로 1,0 만들기
+            if(~full & rand_wr) begin // full 아니면서 wr 1일때만 새로운 wdata 생성
+                wdata = $random%256; // wdata random 값 생성
+                compare_data[write_count%16] = wdata; // 나중에 rdata와 비교하기 위해 저장
+                write_count = write_count + 1;
+                wr = 1;
             end else begin
-                $display("fail: rdata = %h, compare_data =%h", rdata, compare_data[read_count%16]); //fail시 무슨값 출력하는지 
+                wr = 0;
+            end
+            
+            // 읽기 로직
+            rand_rd = $random%2; // rd random으로 생성 0,1
+            if(~empty & rand_rd) begin // empty가 아니고 rand_rd가 1일 때
+                rd = 1;
+                if(rdata == compare_data[read_count%16]) begin // read한 횟수에 맞춰 비교
+                    $display("pass");
+                end else begin
+                    $display("fail: rdata = %h, compare_data = %h", rdata, compare_data[read_count%16]); // fail시 값 출력
+                end
+                read_count = read_count + 1;
+            end else begin
+                rd = 0;
             end
         end
-        read_count = read_count + 1;
-         end
-    endmodule
-
+    end
+endmodule
