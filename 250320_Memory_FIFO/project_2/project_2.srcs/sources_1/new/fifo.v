@@ -291,7 +291,7 @@ module FIFO (
         .rdata(rdata),
         .rd(fifo_rd)   // 비어있지 않을 때만 읽기
     );
-
+    
     // FIFO_control_unit 인스턴스
     FIFO_control_unit ctrl_unit (
         .clk(clk),
@@ -317,81 +317,16 @@ module register_file (
     input rd
 );
     reg [7:0] mem [0:15];  // 16개의 8비트 레지스터
-
+    
     // 쓰기 동작
     always @(posedge clk) begin
         if (wr) begin
             mem[waddr] <= wdata;
         end
     end
-
+    
     // 읽기 동작 - 조합 논리로 구현
-    assign rdata = (rd) ? mem[raddr] : 8'b0;
-endmodule
-
-// module FIFO_control_unit (
-//     input clk, reset,
-//     // 제어 입력
-//     input wr, rd,
-//     // 주소 출력
-//     output [3:0] waddr, raddr,
-//     // 상태 출력
-//     output full, empty
-// );
-//     // 레지스터
-//     reg [4:0] wptr, rptr;  // 5비트 포인터 - 4비트 주소 + 1비트 순환 감지
-    
-//     // 출력 할당
-//     assign waddr = wptr[3:0];  // 하위 4비트만 주소로 사용
-//     assign raddr = rptr[3:0];
-    
-//     // full 및 empty 상태 계산
-//     // full: 하위 4비트는 같고, 상위 비트는 다른 경우
-//     // empty: 두 포인터가 정확히 같은 경우
-//     assign full = (wptr[3:0] == rptr[3:0]) && (wptr[4] != rptr[4]);
-//     assign empty = (wptr == rptr);
-    
-//     // 순차 로직
-//     always @(posedge clk or posedge reset) begin
-//         if (reset) begin
-//             wptr <= 0;
-//             rptr <= 0;
-//         end
-//         else begin
-//             // 쓰기 동작 - 꽉 차있지 않을 때만 수행
-//             if (wr && !full) begin
-//                 wptr <= wptr + 1;  // 쓰기 포인터 증가
-//             end
-            
-//             // 읽기 동작 - 비어있지 않을 때만 수행
-//             if (rd && !empty) begin
-//                 rptr <= rptr + 1;  // 읽기 포인터 증가
-//             end
-//         end
-//     end
-// endmodule
-
-module register_file (
-    input clk,
-    // 쓰기
-    input [3:0] waddr,
-    input [7:0] wdata,
-    input wr,
-    // 읽기
-    input [3:0] raddr,
-    output [7:0] rdata,
-    input rd
-);
-    reg [7:0] mem [0:15];  // 16개의 8비트 레지스터
-    
-    // 쓰기 동작
-    always @(posedge clk) begin
-        if (wr) begin
-            mem[waddr] <= wdata;
-        end
-    end
-    
-    // 읽기 동작 - 조합 논리로 구현 (조건연산자 제거)
+    // 조건연산자 대신 always 블록 사용
     reg [7:0] rdata_reg;
     
     always @(*) begin
@@ -422,13 +357,10 @@ module FIFO_control_unit (
     assign waddr = wptr[3:0];  // 하위 4비트만 주소로 사용
     assign raddr = rptr[3:0];
     
-    // full 및 empty 상태 계산 (조건연산자 없음)
-    wire same_addr, diff_msb;
-    
-    assign same_addr = (wptr[3:0] == rptr[3:0]);
-    assign diff_msb = (wptr[4] != rptr[4]);
-    assign full = same_addr & diff_msb;
-    
+    // full 및 empty 상태 계산 - 5비트 포인터 사용
+    // full: 하위 4비트는 같고, 상위 비트는 다른 경우
+    // empty: 두 포인터가 정확히 같은 경우
+    assign full = (wptr[3:0] == rptr[3:0]) && (wptr[4] != rptr[4]);
     assign empty = (wptr == rptr);
     
     // 순차 로직
@@ -449,4 +381,4 @@ module FIFO_control_unit (
             end
         end
     end
-endmodule //조건 연산자 제거 
+endmodule
