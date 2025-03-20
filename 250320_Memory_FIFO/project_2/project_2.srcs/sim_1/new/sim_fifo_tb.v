@@ -8,8 +8,13 @@ module tb_FIFO();
     // 디버깅용 포인터 신호
     wire [3:0] wptr, rptr;
     
-    // 변수 i 선언
+    // 변수 선언
     integer i;
+    integer rand_rd;
+    integer rand_wr;
+    reg [7:0] compare_data [0:15];
+    integer write_count;
+    integer read_count;
     
     // FIFO 인스턴스
     FIFO u_FIFO (
@@ -72,5 +77,16 @@ module tb_FIFO();
             wdata = i*2+1;
             #10;
         end
+        
+        // 랜덤 쓰기 테스트
+        for (i=0; i<50; i=i+1) begin
+            @(negedge clk);
+            rand_wr = $random%2;
+            if(~full & rand_wr) //rand = 1일때만 if문으로 들어가 random value 생성
+                wdata = $random%256;
+                compare_data[] = wdata; //1byte -> 모든 값이 들어갈 수 있는 경우 생성
+        end
+        compare_data[] = wdata;
     end
 endmodule
+
