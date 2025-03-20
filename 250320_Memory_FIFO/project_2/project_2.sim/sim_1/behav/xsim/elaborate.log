@@ -1,8 +1,20 @@
 Vivado Simulator 2020.2
 Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto b2962164025d4a23b36777205434c571 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_mem_ip_behav xil_defaultlib.tb_mem_ip xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto b2962164025d4a23b36777205434c571 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_fifo_uart_behav xil_defaultlib.tb_fifo_uart xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.register_file
+Compiling module xil_defaultlib.FIFO_control_unit
+Compiling module xil_defaultlib.FIFO
+Compiling module xil_defaultlib.uart_tx
+Compiling module xil_defaultlib.baud_tick_gen_default
+Compiling module xil_defaultlib.uart_rx
+Compiling module xil_defaultlib.uart_fifo_top
+Compiling module xil_defaultlib.tb_fifo_uart
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_fifo_uart_behav

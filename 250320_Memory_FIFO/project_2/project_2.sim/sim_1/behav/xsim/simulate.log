@@ -1,4 +1,3 @@
 Vivado Simulator 2020.2
 Time resolution is 1 ps
-pass
-$stop called at time : 635 ns : File "C:/Users/kccistc/Desktop/250320_Memory_FIFO/250320_Memory_FIFO/project_2/project_2.srcs/sim_1/new/tb_memory.v" Line 57
+$finish called at time : 947570 ns : File "C:/Users/kccistc/Desktop/250320_Memory_FIFO/250320_Memory_FIFO/project_2/project_2.srcs/sim_1/new/sim_fifo_tb.v" Line 35
