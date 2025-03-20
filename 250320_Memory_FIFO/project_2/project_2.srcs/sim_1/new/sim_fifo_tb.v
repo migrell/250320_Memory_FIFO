@@ -8,6 +8,9 @@ module tb_FIFO();
     // 디버깅용 포인터 신호
     wire [3:0] wptr, rptr;
     
+    // 변수 i 선언
+    integer i;
+    
     // FIFO 인스턴스
     FIFO u_FIFO (
         .clk(clk), 
@@ -36,41 +39,38 @@ module tb_FIFO();
         rd = 0;
         
         // 리셋 해제
-        #20 reset = 0;
+        #10 
+        reset = 0;
         #10;
         
-        // 16개 데이터 쓰기 (0x10~0x1F)
+        // 쓰기 테스트
         wr = 1;
-        wdata = 8'h10;
-        #10 wdata = 8'h11;
-        #10 wdata = 8'h12;
-        #10 wdata = 8'h13;
-        #10 wdata = 8'h14;
-        #10 wdata = 8'h15;
-        #10 wdata = 8'h16;
-        #10 wdata = 8'h17;
-        #10 wdata = 8'h18;
-        #10 wdata = 8'h19;
-        #10 wdata = 8'h1A;
-        #10 wdata = 8'h1B;
-        #10 wdata = 8'h1C;
-        #10 wdata = 8'h1D;
-        #10 wdata = 8'h1E;
-        #10 wdata = 8'h1F;
-        #10;
+        
+        for(i=0; i<17; i = i + 1) begin
+            wdata = i;
+            #10;
+        end
+        
+        // 읽기 empty 테스트
         wr = 0;
-        
-        // full 신호 확인
-        #20;
-        
-        // 데이터 읽기
         rd = 1;
-        #160; // 16개 데이터를 읽기 위한 정확한 시간 (16 * 10ns)
+        
+        for(i=0; i<17; i = i + 1) begin
+            #10;
+        end
+        
+        // 초기화 과정
+        wr = 0;
         rd = 0;
+        #10;
         
-        // empty 신호 확인
-        #20;
+        // 동시 읽고 쓰기
+        wr = 1;
+        rd = 1;
         
-        $finish;
+        for(i=0; i<17; i = i + 1) begin
+            wdata = i*2+1;
+            #10;
+        end
     end
 endmodule
