@@ -129,6 +129,7 @@ module uart_tx (
     assign o_tx = tx_reg;
     reg [2:0] bit_count, bit_count_next;  // Added bit_count_next
     reg [3:0] tick_count_reg, tick_count_next;
+    reg[7:0] temp_data_reg , temp_data_next;
 
     reg tx_done_reg, tx_done_next;
     assign o_tx_done = tx_done_reg;
