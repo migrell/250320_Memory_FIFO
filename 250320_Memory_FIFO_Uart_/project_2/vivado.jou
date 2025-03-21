@@ -9,3 +9,6 @@
 # Log file: C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/vivado.log
 # Journal file: C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2\vivado.jou
 #-----------------------------------------------------------
+start_gui
+open_project {C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.xpr}
+update_compile_order -fileset sources_1
