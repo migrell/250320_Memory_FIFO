@@ -2,13 +2,10 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Wed Mar 19 10:51:44 2025
-# Process ID: 18648
-# Current directory: D:/FPGA_JIHO_OUT/project_2
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10236 D:\FPGA_JIHO_OUT\project_2\project_2.xpr
-# Log file: D:/FPGA_JIHO_OUT/project_2/vivado.log
-# Journal file: D:/FPGA_JIHO_OUT/project_2\vivado.jou
+# Start of session at: Fri Mar 21 09:01:33 2025
+# Process ID: 1988
+# Current directory: C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15856 C:\Users\kccistc\Desktop\Verilog Project_2\ÄÚµå+½Ã¹Ä\250320_Memory_FIFO\250320_Memory_FIFO_Uart_\project_2\project_2.xpr
+# Log file: C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/vivado.log
+# Journal file: C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2\vivado.jou
 #-----------------------------------------------------------
-start_gui
-open_project D:/FPGA_JIHO_OUT/project_2/project_2.xpr
-update_compile_order -fileset sources_1
