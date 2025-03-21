@@ -2,7 +2,7 @@
 
 module tb_fifo_uart();
     // 클럭 및 리셋 신호
-    reg clk, rst;
+    reg clk, rst;  
     
     // UART 신호
     reg rx;
