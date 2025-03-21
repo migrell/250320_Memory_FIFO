@@ -1,3 +1,15 @@
 Vivado Simulator 2020.2
 Time resolution is 1 ps
-$finish called at time : 947570 ns : File "C:/Users/kccistc/Desktop/250320_Memory_FIFO/250320_Memory_FIFO/project_2/project_2.srcs/sim_1/new/sim_fifo_tb.v" Line 35
+Time                    0: TX signal changed to 1
+RX data transfer completed at time            937590000
+Waiting for TX to start transmission...
+Time           1041665000: TX signal changed to 0
+Simulation completed at time           1137590000
+$finish called at time : 1137590 ns : File "C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.srcs/sim_1/new/sim_fifo_tb.v" Line 61
+Time           1979075000: TX signal changed to 1
+Time           2083245000: TX signal changed to 0
+Time           2187395000: TX signal changed to 1
+Time           2291555000: TX signal changed to 0
+Time           2604035000: TX signal changed to 1
+Time           2812355000: TX signal changed to 0
+Time           3020675000: TX signal changed to 1

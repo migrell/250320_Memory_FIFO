@@ -23,3 +23,436 @@ INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
 open_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1085.582 ; gain = 0.000
 update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_fifo_uart' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_fifo_uart_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.srcs/sources_1/new/fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FIFO
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-311] analyzing module FIFO_control_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.srcs/sources_1/new/uart_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_fifo_top
+INFO: [VRFC 10-311] analyzing module uart_tx
+INFO: [VRFC 10-311] analyzing module uart_rx
+INFO: [VRFC 10-311] analyzing module baud_tick_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.srcs/sim_1/new/sim_fifo_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_fifo_uart
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.sim/sim_1/behav/xsim'
+"xelab -wto b2962164025d4a23b36777205434c571 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_fifo_uart_behav xil_defaultlib.tb_fifo_uart xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto b2962164025d4a23b36777205434c571 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_fifo_uart_behav xil_defaultlib.tb_fifo_uart xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.register_file
+Compiling module xil_defaultlib.FIFO_control_unit
+Compiling module xil_defaultlib.FIFO
+Compiling module xil_defaultlib.uart_tx
+Compiling module xil_defaultlib.baud_tick_gen_default
+Compiling module xil_defaultlib.uart_rx
+Compiling module xil_defaultlib.uart_fifo_top
+Compiling module xil_defaultlib.tb_fifo_uart
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_fifo_uart_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_fifo_uart_behav -key {Behavioral:sim_1:Functional:tb_fifo_uart} -tclbatch {tb_fifo_uart.tcl} -view {{C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/tb_fifo_uart_behav.wcfg}} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+open_wave_config {C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/tb_fifo_uart_behav.wcfg}
+source tb_fifo_uart.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_fifo_uart_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 1085.582 ; gain = 0.000
+run all
+$finish called at time : 947570 ns : File "C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.srcs/sim_1/new/sim_fifo_tb.v" Line 35
+run all
+run: Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 1827.133 ; gain = 0.000
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_fifo_uart' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_fifo_uart_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.sim/sim_1/behav/xsim'
+"xelab -wto b2962164025d4a23b36777205434c571 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_fifo_uart_behav xil_defaultlib.tb_fifo_uart xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto b2962164025d4a23b36777205434c571 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_fifo_uart_behav xil_defaultlib.tb_fifo_uart xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1827.133 ; gain = 0.000
+run all
+$finish called at time : 947570 ns : File "C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.srcs/sim_1/new/sim_fifo_tb.v" Line 35
+run all
+run: Time (s): cpu = 00:00:39 ; elapsed = 00:01:01 . Memory (MB): peak = 1827.133 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_fifo_uart' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_fifo_uart_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.sim/sim_1/behav/xsim'
+"xelab -wto b2962164025d4a23b36777205434c571 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_fifo_uart_behav xil_defaultlib.tb_fifo_uart xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto b2962164025d4a23b36777205434c571 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_fifo_uart_behav xil_defaultlib.tb_fifo_uart xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+run all
+$finish called at time : 947570 ns : File "C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.srcs/sim_1/new/sim_fifo_tb.v" Line 35
+run all
+run: Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 1827.133 ; gain = 0.000
+run all
+run: Time (s): cpu = 00:00:18 ; elapsed = 00:00:28 . Memory (MB): peak = 1827.133 ; gain = 0.000
+update_compile_order -fileset sources_1
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_fifo_uart' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_fifo_uart_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.srcs/sources_1/new/fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FIFO
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-311] analyzing module FIFO_control_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.srcs/sources_1/new/uart_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_fifo_top
+INFO: [VRFC 10-311] analyzing module uart_tx
+INFO: [VRFC 10-311] analyzing module uart_rx
+INFO: [VRFC 10-311] analyzing module baud_tick_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.srcs/sim_1/new/sim_fifo_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_fifo_uart
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.sim/sim_1/behav/xsim'
+"xelab -wto b2962164025d4a23b36777205434c571 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_fifo_uart_behav xil_defaultlib.tb_fifo_uart xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto b2962164025d4a23b36777205434c571 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_fifo_uart_behav xil_defaultlib.tb_fifo_uart xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.register_file
+Compiling module xil_defaultlib.FIFO_control_unit
+Compiling module xil_defaultlib.FIFO
+Compiling module xil_defaultlib.uart_tx
+Compiling module xil_defaultlib.baud_tick_gen_default
+Compiling module xil_defaultlib.uart_rx
+Compiling module xil_defaultlib.uart_fifo_top
+Compiling module xil_defaultlib.tb_fifo_uart
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_fifo_uart_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1827.133 ; gain = 0.000
+run all
+$finish called at time : 947570 ns : File "C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.srcs/sim_1/new/sim_fifo_tb.v" Line 35
+run all
+run: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1827.133 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_fifo_uart' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_fifo_uart_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.srcs/sources_1/new/fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FIFO
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-311] analyzing module FIFO_control_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.srcs/sources_1/new/uart_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_fifo_top
+INFO: [VRFC 10-311] analyzing module uart_tx
+INFO: [VRFC 10-311] analyzing module uart_rx
+INFO: [VRFC 10-311] analyzing module baud_tick_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.srcs/sim_1/new/sim_fifo_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_fifo_uart
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.sim/sim_1/behav/xsim'
+"xelab -wto b2962164025d4a23b36777205434c571 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_fifo_uart_behav xil_defaultlib.tb_fifo_uart xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto b2962164025d4a23b36777205434c571 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_fifo_uart_behav xil_defaultlib.tb_fifo_uart xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.register_file
+Compiling module xil_defaultlib.FIFO_control_unit
+Compiling module xil_defaultlib.FIFO
+Compiling module xil_defaultlib.uart_tx
+Compiling module xil_defaultlib.baud_tick_gen_default
+Compiling module xil_defaultlib.uart_rx
+Compiling module xil_defaultlib.uart_fifo_top
+Compiling module xil_defaultlib.tb_fifo_uart
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_fifo_uart_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+run all
+$finish called at time : 947570 ns : File "C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.srcs/sim_1/new/sim_fifo_tb.v" Line 35
+run all
+run: Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 1827.133 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_fifo_uart' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_fifo_uart_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.srcs/sources_1/new/fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FIFO
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-311] analyzing module FIFO_control_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.srcs/sources_1/new/uart_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_fifo_top
+INFO: [VRFC 10-311] analyzing module uart_tx
+INFO: [VRFC 10-311] analyzing module uart_rx
+INFO: [VRFC 10-311] analyzing module baud_tick_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.srcs/sim_1/new/sim_fifo_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_fifo_uart
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.sim/sim_1/behav/xsim'
+"xelab -wto b2962164025d4a23b36777205434c571 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_fifo_uart_behav xil_defaultlib.tb_fifo_uart xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto b2962164025d4a23b36777205434c571 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_fifo_uart_behav xil_defaultlib.tb_fifo_uart xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.register_file
+Compiling module xil_defaultlib.FIFO_control_unit
+Compiling module xil_defaultlib.FIFO
+Compiling module xil_defaultlib.uart_tx
+Compiling module xil_defaultlib.baud_tick_gen_default
+Compiling module xil_defaultlib.uart_rx
+Compiling module xil_defaultlib.uart_fifo_top
+Compiling module xil_defaultlib.tb_fifo_uart
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_fifo_uart_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1827.133 ; gain = 0.000
+run all
+$finish called at time : 947570 ns : File "C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.srcs/sim_1/new/sim_fifo_tb.v" Line 35
+run all
+run: Time (s): cpu = 00:00:25 ; elapsed = 00:00:37 . Memory (MB): peak = 1827.133 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_fifo_uart' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_fifo_uart_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.srcs/sources_1/new/fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FIFO
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-311] analyzing module FIFO_control_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.srcs/sources_1/new/uart_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_fifo_top
+INFO: [VRFC 10-311] analyzing module uart_tx
+INFO: [VRFC 10-311] analyzing module uart_rx
+INFO: [VRFC 10-311] analyzing module baud_tick_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.srcs/sim_1/new/sim_fifo_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_fifo_uart
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.sim/sim_1/behav/xsim'
+"xelab -wto b2962164025d4a23b36777205434c571 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_fifo_uart_behav xil_defaultlib.tb_fifo_uart xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto b2962164025d4a23b36777205434c571 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_fifo_uart_behav xil_defaultlib.tb_fifo_uart xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.register_file
+Compiling module xil_defaultlib.FIFO_control_unit
+Compiling module xil_defaultlib.FIFO
+Compiling module xil_defaultlib.uart_tx
+Compiling module xil_defaultlib.baud_tick_gen_default
+Compiling module xil_defaultlib.uart_rx
+Compiling module xil_defaultlib.uart_fifo_top
+Compiling module xil_defaultlib.tb_fifo_uart
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_fifo_uart_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1827.133 ; gain = 0.000
+run all
+$finish called at time : 947570 ns : File "C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.srcs/sim_1/new/sim_fifo_tb.v" Line 35
+run all
+run: Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 1827.133 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_fifo_uart' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_fifo_uart_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.srcs/sources_1/new/fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FIFO
+INFO: [VRFC 10-311] analyzing module register_file
+INFO: [VRFC 10-311] analyzing module FIFO_control_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.srcs/sources_1/new/uart_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_fifo_top
+INFO: [VRFC 10-311] analyzing module uart_tx
+INFO: [VRFC 10-311] analyzing module uart_rx
+INFO: [VRFC 10-311] analyzing module baud_tick_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.srcs/sim_1/new/sim_fifo_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_fifo_uart
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.sim/sim_1/behav/xsim'
+"xelab -wto b2962164025d4a23b36777205434c571 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_fifo_uart_behav xil_defaultlib.tb_fifo_uart xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto b2962164025d4a23b36777205434c571 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_fifo_uart_behav xil_defaultlib.tb_fifo_uart xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.register_file
+Compiling module xil_defaultlib.FIFO_control_unit
+Compiling module xil_defaultlib.FIFO
+Compiling module xil_defaultlib.uart_tx
+Compiling module xil_defaultlib.baud_tick_gen_default
+Compiling module xil_defaultlib.uart_rx
+Compiling module xil_defaultlib.uart_fifo_top
+Compiling module xil_defaultlib.tb_fifo_uart
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_fifo_uart_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+Time                    0: TX signal changed to 1
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1827.133 ; gain = 0.000
+run all
+RX data transfer completed at time            937590000
+Waiting for TX to start transmission...
+Time           1041665000: TX signal changed to 0
+Simulation completed at time           1137590000
+$finish called at time : 1137590 ns : File "C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/project_2.srcs/sim_1/new/sim_fifo_tb.v" Line 61
+run all
+Time           1979075000: TX signal changed to 1
+Time           2083245000: TX signal changed to 0
+Time           2187395000: TX signal changed to 1
+Time           2291555000: TX signal changed to 0
+Time           2604035000: TX signal changed to 1
+Time           2812355000: TX signal changed to 0
+Time           3020675000: TX signal changed to 1
+run: Time (s): cpu = 00:00:21 ; elapsed = 00:00:33 . Memory (MB): peak = 1827.133 ; gain = 0.000
+save_wave_config {C:/Users/kccistc/Desktop/Verilog Project_2/ÄÚµå+½Ã¹Ä/250320_Memory_FIFO/250320_Memory_FIFO_Uart_/project_2/tb_fifo_uart_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Mar 21 10:30:23 2025...
